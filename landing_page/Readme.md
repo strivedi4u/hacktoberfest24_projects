@@ -1,0 +1,2 @@
+# Personal Portfolio Landing Page
+This project is a clean, modern, and responsive landing page designed to showcase an individual's portfolio, skills, and experience. The page provides an intuitive and engaging user experience with smooth navigation and clearly defined sections, making it easy for visitors to explore the content. It serves as a personal website for professionals, helping them present their work, skills, and services effectively.
