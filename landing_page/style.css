@@ -26,8 +26,8 @@ body {
     color: #fff;
     padding: 20px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-around;
+    align-items:center;
     position: sticky;
     top: 0;
     width: 100%;
@@ -104,8 +104,8 @@ body {
 /* Responsive Styles */
 @media (max-width: 768px) {
     #header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items:center;
     }
 
     #header nav ul {
