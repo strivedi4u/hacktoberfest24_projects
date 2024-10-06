@@ -1,0 +1,172 @@
+/* General Styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light gray background */
+}
+
+/* Main Title Styling */
+.main-title {
+    color: #f0a500; /* Yellow color for emphasis */
+    font-size: 3rem; /* Larger title size */
+    font-weight: bold; /* Bold font weight */
+    text-align: center; /* Center align title */
+    margin-bottom: 20px; /* Spacing below title */
+}
+
+/* Navbar Styling */
+.nav-link {
+    color: white !important; /* Navbar link color */
+    font-size: 1.1rem; /* Font size for navbar links */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.nav-link:hover {
+    color: #f0a500 !important; /* Change color on hover */
+}
+
+header {
+    background-color: #343a40; /* Dark header background */
+    padding: 30px; /* Padding around header */
+    border-bottom: 3px solid #f0a500; /* Yellow bottom border */
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 80px 0; /* Vertical padding */
+    background: linear-gradient(135deg, #f0a500 0%, #343a40 100%); /* Gradient background */
+    color: white; /* White text color */
+    text-align: center; /* Center align text */
+    border-bottom: 2px solid #e0e0e0; /* Light gray border below */
+}
+
+.hero-section img {
+    max-width: 180px; /* Limit image width */
+    border-radius: 50%; /* Round image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+.hero-section h2 {
+    font-size: 2.5rem; /* Hero section title size */
+    margin-bottom: 20px; /* Space below title */
+}
+
+.hero-section .btn {
+    padding: 10px 25px; /* Button padding */
+    border-radius: 25px; /* Rounded button */
+    font-size: 1.2rem; /* Button font size */
+    background-color: #fff; /* White button background */
+    color: #343a40; /* Dark text color */
+    border: none; /* No border */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.hero-section .btn:hover {
+    background-color: #f0a500; /* Change to yellow on hover */
+    color: white; /* Change text color on hover */
+}
+
+/* Section Separator */
+.section-separator {
+    height: 2px; /* Height of the separator */
+    background-color: #e0e0e0; /* Light gray color for separator */
+    margin: 40px 0; /* Margin around the separator */
+}
+
+/* Portfolio */
+.portfolio-item {
+    transition: all 0.3s ease; /* Smooth transition */
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.portfolio-item img {
+    transition: transform 0.3s ease; /* Image scaling */
+}
+
+.portfolio-item img:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+/* Skills Section */
+#skills ul {
+    padding: 0; /* Remove padding */
+    list-style-type: none; /* No list style */
+}
+
+#skills .badge {
+    font-size: 1.1rem; /* Badge font size */
+    padding: 10px 15px; /* Badge padding */
+}
+
+/* Contact Form Styling */
+.contact-section {
+    background-color: #fff; /* White background for contact section */
+    padding: 50px; /* Padding around section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    margin: 40px 0; /* Margin above and below contact section */
+}
+
+.contact-form {
+    border: 1px solid #e0e0e0; /* Light gray border */
+    padding: 25px; /* Padding inside form */
+}
+
+.contact-form .form-control {
+    border-radius: 10px; /* Rounded input fields */
+    padding: 12px; /* Padding inside input fields */
+    border: 2px solid #ced4da; /* Visible border for input fields */
+}
+
+.contact-form .form-control:focus {
+    box-shadow: none; /* Remove shadow on focus */
+    border-color: #f0a500; /* Yellow border on focus */
+}
+
+.contact-form button {
+    background-color: #f0a500; /* Yellow button background */
+    border: none; /* No border */
+    padding: 12px 25px; /* Button padding */
+    border-radius: 10px; /* Rounded button */
+    font-size: 1.2rem; /* Button font size */
+    transition: background-color 0.3s; /* Smooth background transition */
+}
+
+.contact-form button:hover {
+    background-color: #d48e00; /* Darker yellow on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Dark footer background */
+    color: white; /* White text color */
+    padding: 20px; /* Padding inside footer */
+    text-align: center; /* Center align footer text */
+    margin-top: 20px; /* Space above footer */
+}
+/* Section Separator */
+.section-separator {
+    height: 4px; /* Increased height of the separator */
+    background-color: #f0a500; /* Changed to a bright color for visibility */
+    margin: 40px 0; /* Margin around the separator */
+}
+
+/* About, Skills, Contact Section Styling */
+#about, #portfolio, #skills, #contact {
+    background-color: #ffffff; /* White background for sections */
+    border-radius: 10px; /* Rounded corners */
+    padding: 20px; /* Padding inside the sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
+
+/* Contact Form Styling */
+.contact-section {
+    background-color: #ffffff; /* White background */
+    padding: 50px; /* Padding for contact section */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}
