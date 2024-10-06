@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modern Currency Converter</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Currency Converter</h1>
+      <div class="converter-card">
+        <div class="input-section">
+          <input type="number" id="amount" placeholder="Amount" value="1" />
+          <select id="fromCurrency"></select>
+        </div>
+        <div class="input-section">
+          <select id="toCurrency"></select>
+        </div>
+        <button id="convert">Convert</button>
+        <h2 id="result"></h2>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
