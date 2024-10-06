@@ -131,3 +131,10 @@ footer {
 footer p {
     margin: 0;
 }
+.icon{
+    height : 30px;
+    width: 30px;
+    margin-top: 8px;
+    margin-left: 4px;
+
+}
