@@ -20,19 +20,31 @@ body {
 }
 
 /* Header */
+/* General Header Styling */
 #header {
     background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-around;
+    align-items:center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#header .logo h1 {
+    font-size: 24px;
+    margin: 0;
 }
 
 #header nav ul {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 25px;
+    margin: 0;
 }
 
 #header nav ul li {
@@ -42,15 +54,109 @@ body {
 #header nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+/* Add hover effect to navigation links */
+#header nav ul li a:hover {
+    color: #f78f3f;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* CTA Button Styling */
 .cta {
     background-color: #f78f3f;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 4px;
     text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+/* Hover effect for CTA button */
+.cta:hover {
+    background-color: #f56500;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Hamburger Menu Styling */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #header {
+        flex-direction: row;
+        align-items:center;
+    }
+
+    #header nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        display: none;
+        width: 100%;
+        background-color: #333;
+        padding: 20px 0;
+    }
+
+    #header nav ul.nav-active {
+        display: flex;
+    }
+
+    /* Make the hamburger menu visible on smaller screens */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Rotate hamburger lines when active */
+    .menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+}
+
+/* Adjust logo size on smaller screens */
+@media (max-width: 480px) {
+    #header .logo h1 {
+        font-size: 20px;
+    }
+
+    #header nav ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .cta {
+        padding: 10px 20px;
+    }
+}
+
 
 /* Hero Section */
 #hero {
