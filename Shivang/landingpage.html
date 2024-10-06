@@ -1,125 +1,119 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        .hero-section {
-            text-align: center;
-        }
-
-        .hero-section img {
-            max-width: 100%;
-        }
-
-        .portfolio-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .portfolio-item {
-            width: 300px;
-            margin-bottom: 20px;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-        }
-
-        .skills-section {
-            text-align: center;
-        }
-
-        .contact-section {
-            text-align: center;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>My Portfolio</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </nav>
+    <!-- Header -->
+    <header class="py-4">
+        <div class="container text-center">
+            <h1 class="main-title">My Portfolio</h1>
+            <nav class="nav justify-content-center mt-3">
+                <a class="nav-link mx-3" href="#about">About</a>
+                <a class="nav-link mx-3" href="#portfolio">Portfolio</a>
+                <a class="nav-link mx-3" href="#skills">Skills</a>
+                <a class="nav-link mx-3" href="#contact">Contact</a>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section class="hero-section">
-            <h2>Hi, I'm Shivang Trivedi</h2>
-            <img src="your-profile-picture.jpg" alt="Your Profile Picture">
-            <p>A passionate Researcher with 2+ years of experience.</p>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I have a strong background in Python. I'm passionate about creating new things.</p>
-        </section>
-
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <div class="portfolio-section">
-                <div class="portfolio-item">
-                    <img src="project1.jpg" alt="Project 1">
-                    <h3>Project 1</h3>
-                    <p>Description of Project 1</p>
-                </div>
-                </div>
-        </section>
-
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                </ul>
-        </section>
-
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: your@email.com</p>
-            <p>Phone: Your Phone Number</p>
+    <!-- Main Content -->
+    <main class="container my-5">
+        <div class="portfolio-container p-4 shadow-lg rounded">
+            <!-- Hero Section -->
+            <section class="hero-section text-center mb-5">
+                <h2 class="mb-3">Hi, I'm Shivang Trivedi</h2>
+                <img src="your-profile-picture.jpg" alt="Your Profile Picture" class="img-fluid rounded-circle mb-4">
+                <p class="lead mb-4">A passionate Researcher with 2+ years of experience.</p>
+                <a href="#portfolio" class="btn btn-primary">View My Work</a>
             </section>
+
+            <div class="section-separator"></div>
+
+            <!-- About Section -->
+            <section id="about" class="mb-5">
+                <h2 class="text-center mb-4">About Me</h2>
+                <p class="text-center">I have a strong background in Python and am passionate about creating new things that make a difference. I love taking on challenges that push me to grow as a professional and developer.</p>
+            </section>
+
+            <div class="section-separator"></div>
+
+            <!-- Portfolio Section -->
+            <section id="portfolio" class="mb-5">
+                <h2 class="text-center mb-4">Portfolio</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="portfolio-item card h-100 shadow-sm border-0">
+                            <img src="project1.jpg" alt="Project 1" class="card-img-top rounded">
+                            <div class="card-body">
+                                <h3 class="card-title">Project 1</h3>
+                                <p class="card-text">Description of Project 1.</p>
+                                <a href="#" class="btn btn-outline-primary">View Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Add more projects as needed -->
+                </div>
+            </section>
+
+            <div class="section-separator"></div>
+
+            <!-- Skills Section -->
+            <section id="skills" class="text-center mb-5">
+                <h2 class="mb-4">Skills</h2>
+                <ul class="list-inline">
+                    <li class="list-inline-item badge bg-primary mx-2">HTML</li>
+                    <li class="list-inline-item badge bg-secondary mx-2">CSS</li>
+                    <li class="list-inline-item badge bg-success mx-2">JavaScript</li>
+                    <!-- Add more skills as needed -->
+                </ul>
+            </section>
+
+            <div class="section-separator"></div>
+
+            <!-- Contact Section -->
+            <section id="contact" class="contact-section text-center mb-5">
+                <h2 class="mb-4">Contact Me</h2>
+                <form class="row g-3 contact-form border p-4">
+                    <div class="col-md-6">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="subject" class="form-label">Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Subject" required>
+                    </div>
+                    <div class="col-12">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </div>
+                </form>
+            </section>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 My Portfolio</p>
+    <!-- Footer -->
+    <footer class="py-4 text-center bg-dark text-white">
+        <p class="mb-0">&copy; 2024 My Portfolio</p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
