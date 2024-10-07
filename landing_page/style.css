@@ -1,4 +1,4 @@
-/* Basic reset and body styling */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +6,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     line-height: 1.6;
     background-color: #f4f4f4;
     color: #333;
@@ -236,4 +238,97 @@ footer {
 
 footer p {
     margin: 0;
+}
+.about-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+.containe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 3px solid #ff7700; 
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 119, 0, 0.5); 
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    color: #333;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #ff7700;
+    margin-bottom: 30px;
+}
+
+.about-info {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.about-info li {
+    font-size: 1.2rem;
+    color: #666;
+    flex: 1 1 250px;
+    min-width: 200px;
+}
+
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    list-style-type: none; 
+    color: #333;
+}
+
+/* Download Button */
+.btn-download {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #ff7700;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-download:hover {
+    background-color: #e56700;
+}
+
+/* Image Styling */
+.about-image {
+    flex: 1;
+    text-align: right;
+}
+
+.about-image img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%; 
+    border: 5px solid #ff7700; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
