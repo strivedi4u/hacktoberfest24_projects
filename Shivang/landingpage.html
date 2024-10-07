@@ -2,71 +2,8 @@
 <html>
 <head>
     <title>My Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        section {
-            margin-bottom: 40px;
-        }
-
-        .hero-section {
-            text-align: center;
-        }
-
-        .hero-section img {
-            max-width: 100%;
-        }
-
-        .portfolio-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-
-        .portfolio-item {
-            width: 300px;
-            margin-bottom: 20px;
-        }
-
-        .portfolio-item img {
-            width: 100%;
-        }
-
-        .skills-section {
-            text-align: center;
-        }
-
-        .contact-section {
-            text-align: center;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -75,14 +12,14 @@
             <a href="#about">About</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#contact">Contact</a> <!-- Added Contact link -->
         </nav>
     </header>
 
     <main>
         <section class="hero-section">
             <h2>Hi, I'm Shivang Trivedi</h2>
-            <img src="your-profile-picture.jpg" alt="Your Profile Picture">
+            <img src="https://via.placeholder.com/150" alt="Your Profile Picture">
             <p>A passionate Researcher with 2+ years of experience.</p>
         </section>
 
@@ -95,11 +32,21 @@
             <h2>Portfolio</h2>
             <div class="portfolio-section">
                 <div class="portfolio-item">
-                    <img src="project1.jpg" alt="Project 1">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 1">
                     <h3>Project 1</h3>
                     <p>Description of Project 1</p>
                 </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2</p>
                 </div>
+                <div class="portfolio-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3</p>
+                </div>
+            </div>
         </section>
 
         <section id="skills">
@@ -108,14 +55,20 @@
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
-                </ul>
+            </ul>
         </section>
 
+        <!-- Contact Info Section -->
         <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: your@email.com</p>
-            <p>Phone: Your Phone Number</p>
-            </section>
+            <h2>Contact Info</h2>
+            <p>You can reach me through the following methods:</p>
+            <ul>
+                <li>Email: <a href="mailto:shivang@example.com">shivang@example.com</a></li>
+                <li>Phone: +91 12345 67890</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/example" target="_blank">linkedin.com/in/example</a></li>
+            </ul>
+        </section>
+
     </main>
 
     <footer>

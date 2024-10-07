@@ -2,6 +2,8 @@
 
 ### ⭐ If you find this repository helpful, please give it a star! ⭐
 
+#### 🎯 Follow me on Github 🎯
+[![GitHub followers](https://img.shields.io/github/followers/strivedi4u.svg?style=social&label=Follow)](https://github.com/strivedi4u?tab=followers)
 
 🎯 Connect with fellow contributors, get support, and have fun along the way!
 🟢 Join our WhatsApp Group Now!
@@ -103,7 +105,7 @@ This milestone aims to help our repository gain visibility and encourage partici
 
 ## Our Top Contributors 
 
-<p align="center"><a href="https://github.com/strivedi4u/Hacktoberfest2024/graphs/contributors">
+<p align="center"><a href="https://github.com/strivedi4u/Hacktoberfest2024_projects/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=strivedi4u/Hacktoberfest2024" max={1000} columns={100} anon={1}/>
 </a></p>
 
