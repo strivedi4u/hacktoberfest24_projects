@@ -2,6 +2,20 @@
 
 ### ⭐ If you find this repository helpful, please give it a star! ⭐
 
+#### 🎯 Follow me on Github 🎯
+[![GitHub followers](https://img.shields.io/github/followers/strivedi4u.svg?style=social&label=Follow)](https://github.com/strivedi4u?tab=followers)
+
+🎯 Connect with fellow contributors, get support, and have fun along the way!
+🟢 Join our WhatsApp Group Now!
+
+🔗 Click Here to Join!  👇👇👇👇👇👇👇
+
+https://chat.whatsapp.com/JP5uGuNAS0f6ShuuanPh7E
+
+![Hacktoberfest2024](https://github.com/user-attachments/assets/e1f0f8b0-146f-4c0b-9ee0-51cc9f0c99b4)
+
+
+
 This repository is part of **Hacktoberfest 2024!** 🌍  
 We’re excited to have you here and encourage developers of all skill levels, especially beginners, to participate in contributing to this open-source project. Whether it’s your first time contributing or you're an experienced developer, this project is designed to be welcoming, fun, and collaborative!
 
@@ -43,12 +57,12 @@ Contributing to this project is easy and rewarding. Follow these steps to make y
    After forking, clone the repository to your local machine using the command:
 
    ```bash
-   git clone https://github.com/strivedi4u/Hacktoberfest24_projects.git
+   git clone https://github.com/strivedi4u/hacktoberfest2024.git
    ```
 
 3. **Navigate to the Project Directory**  
    ```bash
-   cd Hacktoberfest24_projects
+   cd hacktoberfest2024
    ```
 
 4. **Make Your Changes**  
@@ -91,8 +105,8 @@ This milestone aims to help our repository gain visibility and encourage partici
 
 ## Our Top Contributors 
 
-<p align="center"><a href="https://github.com/strivedi4u/Hacktoberfest24_projects/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=strivedi4u/Hacktoberfest24_projects" max={1000} columns={100} anon={1}/>
+<p align="center"><a href="https://github.com/strivedi4u/Hacktoberfest2024_projects/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=strivedi4u/Hacktoberfest2024" max={1000} columns={100} anon={1}/>
 </a></p>
 
 ---
