@@ -1,0 +1,17 @@
+div.dark-mode i{
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+div.dark-mode i p{
+  margin-left: 5px;
+  font-weight: 400;
+}
+
+div.dark-mode{
+  position: absolute;
+right: 10%;
+top: 3%;
+}
