@@ -105,7 +105,7 @@ This milestone aims to help our repository gain visibility and encourage partici
 
 ## Our Top Contributors 
 
-<p align="center"><a href="https://github.com/strivedi4u/Hacktoberfest2024/graphs/contributors">
+<p align="center"><a href="https://github.com/strivedi4u/Hacktoberfest2024_projects/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=strivedi4u/Hacktoberfest2024" max={1000} columns={100} anon={1}/>
 </a></p>
 
