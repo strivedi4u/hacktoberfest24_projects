@@ -1,0 +1,38 @@
+ public class EMI_Calc
+    {
+
+        // Function to calculate EMI
+        static float emi_calculator(float p,
+                            float r, float t)
+        {
+            float emi;
+
+            r = r / (12 * 100); // one month interest
+            t = t * 12; // one month period
+            emi = (p * r * (float)Math.Pow(1 + r, t))
+                / (float)(Math.Pow(1 + r, t) - 1);
+
+            return (emi);
+        }
+
+        // Main Program
+        static public void Main()
+        {
+            float principal=0, rate, time=0, emi;            
+            rate = 10;       
+
+            Console.WriteLine("----------EMI Calculator in C#---------");
+
+            Console.WriteLine("Enter Principal Amount",principal);
+            principal= float.Parse(Console.ReadLine());
+           
+            Console.WriteLine("Enter Period in months", time);
+            time= float.Parse(Console.ReadLine());
+
+            emi = emi_calculator(principal, rate, time);
+
+            Console.WriteLine("For the Period of " + time + " Monthly EMI is: = " + emi + " at the rate of " +rate + "%");
+
+            Console.ReadLine();
+        }
+    }
