@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Tourist Places Memory Game</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .game-info {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .game-board {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .card {
+            aspect-ratio: 3/4;
+            background-color: #4a90e2;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card.flipped {
+            background-color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .card.matched {
+            background-color: #5cb85c;
+            cursor: default;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4a90e2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+
+        @media (max-width: 600px) {
+            .game-board {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Indian Tourist Places Memory Game</h1>
+    <div class="game-info">
+        <div>Moves: <span id="moves">0</span></div>
+        <div>Time: <span id="time">0</span>s</div>
+    </div>
+    <div class="game-board" id="game-board"></div>
+    <button id="reset-btn">Reset Game</button>
+
+    <script>
+        const places = [
+            'Taj Mahal', 'Red Fort', 'Gateway of India', 'Hawa Mahal',
+            'Qutub Minar', 'Golden Temple', 'India Gate'
+        ];
+
+        let cards = [...places, ...places];
+        let flippedCards = [];
+        let matchedPairs = 0;
+        let moves = 0;
+        let gameStarted = false;
+        let timer;
+        let seconds = 0;
+
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        function createBoard() {
+            shuffleArray(cards);
+            const gameBoard = document.getElementById('game-board');
+            gameBoard.innerHTML = '';
+            cards.forEach((place, index) => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+                card.dataset.index = index;
+                card.addEventListener('click', flipCard);
+                gameBoard.appendChild(card);
+            });
+        }
+
+        function flipCard() {
+            if (!gameStarted) {
+                startTimer();
+                gameStarted = true;
+            }
+
+            if (flippedCards.length < 2 && !this.classList.contains('flipped') && !this.classList.contains('matched')) {
+                this.classList.add('flipped');
+                this.textContent = cards[this.dataset.index];
+                flippedCards.push(this);
+
+                if (flippedCards.length === 2) {
+                    moves++;
+                    document.getElementById('moves').textContent = moves;
+                    setTimeout(checkMatch, 500);
+                }
+            }
+        }
+
+        function checkMatch() {
+            const [card1, card2] = flippedCards;
+            if (card1.textContent === card2.textContent) {
+                card1.classList.add('matched');
+                card2.classList.add('matched');
+                matchedPairs++;
+                if (matchedPairs === places.length) {
+                    endGame();
+                }
+            } else {
+                card1.classList.remove('flipped');
+                card2.classList.remove('flipped');
+                card1.textContent = '';
+                card2.textContent = '';
+            }
+            flippedCards = [];
+        }
+
+        function startTimer() {
+            timer = setInterval(() => {
+                seconds++;
+                document.getElementById('time').textContent = seconds;
+            }, 1000);
+        }
+
+        function endGame() {
+            clearInterval(timer);
+            alert(`Congratulations! You completed the game in ${moves} moves and ${seconds} seconds.`);
+        }
+
+        function resetGame() {
+            clearInterval(timer);
+            flippedCards = [];
+            matchedPairs = 0;
+            moves = 0;
+            gameStarted = false;
+            seconds = 0;
+            document.getElementById('moves').textContent = '0';
+            document.getElementById('time').textContent = '0';
+            createBoard();
+        }
+
+        document.getElementById('reset-btn').addEventListener('click', resetGame);
+
+        createBoard();
+    </script>
+</body>
+</html>
