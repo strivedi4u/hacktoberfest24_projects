@@ -1,0 +1,22 @@
+*{
+  font-family: poppins,sans-serif;
+}
+
+:root {
+  --primary-color: #333;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --dark-primary-color: #fff;
+  --dark-background-color: #333;
+  --dark-text-color: #fff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+body.dark-mode {
+  background-color: var(--dark-background-color);
+  color: var(--dark-text-color);
+}

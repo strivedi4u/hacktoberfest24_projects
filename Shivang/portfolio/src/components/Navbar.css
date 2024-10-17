@@ -1,0 +1,68 @@
+.navbar {
+  background-color: var(--background-color);
+  padding: 10px;
+  width: fit-content;
+  border-radius: 20px;
+  position: absolute;
+  left: 37%;
+  top: 3%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+body.dark-mode .navbar {
+  background-color: var(--dark-background-color);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+}
+
+.navbar .nav-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 10px;
+  position: relative; /* Needed for the ::after element */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+body.dark-mode .navbar .nav-link {
+  color: var(--dark-text-color);
+}
+
+.navbar .nav-link:hover {
+  color: rgb(255, 123, 0); 
+}
+
+body.dark-mode .navbar .nav-link:hover {
+  color: rgb(255, 123, 0); 
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 4px;
+  background-color: rgb(255, 123, 0);;
+  border-radius: 10px;
+  transition: width 0.3s ease;
+}
+
+body.dark-mode .navbar .nav-link::after {
+  background-color: var(--dark-primary-color);
+}
+
+.navbar .nav-link:hover::after {
+  width: 60%;
+}
+.navbar {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .nav-link {
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link::after {
+  transition: background-color 0.3s ease;
+}
