@@ -62,7 +62,7 @@ Contributing to this project is easy and rewarding. Follow these steps to make y
 
 3. **Navigate to the Project Directory**  
    ```bash
-   cd hacktoberfest2024
+   cd hacktoberfest2024_projects
    ```
 
 4. **Make Your Changes**  
