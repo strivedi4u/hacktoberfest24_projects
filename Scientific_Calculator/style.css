@@ -1,0 +1,39 @@
+.form{
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+   
+    margin-bottom: 10px;
+    padding: 5px 0;
+    font-size: 20px;
+    font-weight:bold;
+    text-align:center;
+    margin: auto;
+    width: 447px;
+    
+    border: solid black 2px;
+}
+
+/* Set the button style */
+#btn {
+    width: 100%;
+    height: 40px;
+    font-size: 30px;
+}
+
+input[type="button"] {
+
+    color: black;
+    border: solid black 2px;
+    width:100%
+}
+
+/* Set input textarea */
+input[type="text"] {
+    background-color:white;
+    border: solid black 2px;
+    width:100%
+}
