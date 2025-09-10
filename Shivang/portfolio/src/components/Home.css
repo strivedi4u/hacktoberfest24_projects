@@ -1,0 +1,50 @@
+h1.intro{
+  font-family: 'Roboto', sans-serif; /* Use a clean, modern font */
+  font-size: 50px; /* Adjust size as needed */
+  font-weight: 800; /* Bold weight */
+  line-height: 1.2;
+  position: relative;
+  top: 100px;
+  left: 50px;
+}
+
+p.prsn-dtls{
+  position: relative;
+  top: 100px;
+  left: 50px;
+}
+
+.dp {
+  position:absolute;
+  right: 50px;
+  top: 90px;
+  width: 300px;
+  height: 300px;
+  background-color: #f9f9f9; /* Green frame color */
+  box-shadow: 20px 20px 0px #000;
+  border: 2px solid #32CD32;
+box-shadow: 20px 20px 0px #32CD32;
+  padding: 20px;
+}
+
+
+
+.dp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+}
+
+/* @keyframes rotateFrame {
+  0% {
+      transform: rotateY(0deg) rotateX(0deg);
+  }
+  50% {
+      transform: rotateY(15deg) rotateX(5deg);
+  }
+  100% {
+      transform: rotateY(0deg) rotateX(0deg);
+  }
+} */
