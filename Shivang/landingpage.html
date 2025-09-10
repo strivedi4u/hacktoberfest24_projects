@@ -2,11 +2,290 @@
 <html>
 <head>
     <title>My Portfolio</title>
+    <style>
+        html {
+    scroll-padding-top: 150px; /* Adjust this value to match the height of your header */
+}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: slide-down 1s ease-out;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #f39c12;
+        }
+
+        main {
+            padding: 20px;
+            animation: fade-in 1.5s ease-in;
+        }
+
+        section {
+            margin-bottom: 60px;
+        }
+
+        .hero-section {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #3498db;
+            color: white;
+            animation: fade-in 2s ease-in-out;
+        }
+
+        .hero-section h2 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            animation: text-bounce 2s ease infinite;
+        }
+
+        .hero-section img {
+            max-width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        /* .portfolioimg
+        {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+        } */
+
+        .hero-section img:hover {
+            transform: scale(1.1);
+        }
+
+        .portfolio-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .portfolio-item {
+            width: 300px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            animation: fade-up 2s ease forwards;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            border-radius: 10px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .portfolio-item img:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .skills-section ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .skills-section li {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            border-radius: 25px;
+            font-size: 1.2em;
+            animation: fade-in 2s ease-in-out;
+            transition: background-color 0.3s ease;
+        }
+
+        .skills-section li:hover {
+            background-color: #2c3e50;
+        }
+
+        .contact-section p {
+            animation: fade-in 2s ease-in-out;
+        }
+#about,#skills
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-direction: column;
+}
+#portfolio
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-box {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    font-size: 1.2em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background-color: #2980b9;
+}
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            animation: slide-up 1s ease-in-out;
+        }
+        #contact {
+    background-color: #f8f9fa; /* Light background */
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-size: 22px;
+}
+
+#contact h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+.contact-info {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.contact-info p strong {
+    color: #2c3e50; /* Darker text for the labels */
+    font-weight: 600;
+}
+
+#contact p {
+    margin: 0;
+}
+
+#contact a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #2980b9;
+}
+
+
+        /* Keyframes for animations */
+        @keyframes slide-down {
+            0% {
+                transform: translateY(-100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes text-bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fade-up {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slide-up {
+            0% {
+                transform: translateY(100%);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+=======
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header style="background-color: #B7E0FF;">
         <h1>My Portfolio</h1>
         <nav>
             <a href="#about">About</a>
@@ -19,23 +298,43 @@
     <main>
         <section class="hero-section">
             <h2>Hi, I'm Shivang Trivedi</h2>
+            <div class="portfolioimg">
+            <img src="portfolio.png" alt="Your Profile Picture">
+            </div>
+=======
             <img src="https://via.placeholder.com/150" alt="Your Profile Picture">
             <p>A passionate Researcher with 2+ years of experience.</p>
         </section>
 
         <section id="about">
             <h2>About Me</h2>
-            <p>I have a strong background in Python. I'm passionate about creating new things.</p>
+            <p style="width:80%; text-align: center; font-size: 18px; letter-spacing: 2px; ">I'm a beginner web developer with a solid foundation in Python, HTML, CSS, and JavaScript. I enjoy learning new things and building simple, responsive websites. My goal is to keep improving my skills 
+                while working on creative and functional projects. I'm passionate about bringing ideas to life through code..</p>
         </section>
-
+        <h2 style="display: flex; align-items: center; justify-content: center; font-size:30px">Portfolio</h2>
         <section id="portfolio">
-            <h2>Portfolio</h2>
+            
             <div class="portfolio-section">
                 <div class="portfolio-item">
                     <img src="https://via.placeholder.com/300x200" alt="Project 1">
                     <h3>Project 1</h3>
                     <p>Description of Project 1</p>
                 </div>
+            </div>
+            <div class="portfolio-section">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Project 2">
+                    <h3>Project 2</h3>
+                    <p>Description of Project 2</p>
+                </div>
+            </div>
+            <div class="portfolio-section">
+                <div class="portfolio-item">
+                    <img src="project1.jpg" alt="Project 3">
+                    <h3>Project 3</h3>
+                    <p>Description of Project 3</p>
+                </div>
+=======
                 <div class="portfolio-item">
                     <img src="https://via.placeholder.com/300x200" alt="Project 2">
                     <h3>Project 2</h3>
@@ -51,15 +350,30 @@
 
         <section id="skills">
             <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill-box">HTML</div>
+                <div class="skill-box">CSS</div>
+                <div class="skill-box">JavaScript</div>
+            </div>
+=======
             <ul>
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
             </ul>
         </section>
+        
 
         <!-- Contact Info Section -->
         <section id="contact">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p><strong>Email:</strong> your@email.com</p>
+                <p><strong>Phone:</strong> +123 456 7890</p>
+            </div>
+        </section>
+        
+=======
             <h2>Contact Info</h2>
             <p>You can reach me through the following methods:</p>
             <ul>
